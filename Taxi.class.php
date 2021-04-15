@@ -8,20 +8,22 @@ class Taxi extends Car
 
     public function pickUp($passenger)
     {
-        $this->passenger = $passenger;
-        echo $passenger . "人乗車しました\n";
+        $this->passenger += $passenger;
+        return $passenger . "人乗車しました\n";
+    
+        // strval を使う場合は
+        // return strval($passenger) . "人乗車しました\n";
+        // と書くということですか？
     }
     public function lower($passenger)
     {
         if ($this->passenger >= $passenger) {
             $this->passenger -= $passenger;
-            echo $passenger . "人降車しました\n";
+            return $passenger . "人降車しました\n";
         } else {
-            echo $passenger . "人は降車できません\n";
+            return $passenger . "人は降車できません\n";
         }
-        
     }
-
     public function information()
     {
         return
@@ -30,7 +32,7 @@ class Taxi extends Car
             'カラー:' . $this->color . "\n" .
             '乗車人数:' . $this->passenger . "人\n";
     }
-
 }
+
 
 ?>
