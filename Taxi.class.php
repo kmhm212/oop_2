@@ -23,9 +23,9 @@ class Taxi extends Car
     public function information()
     {
         return
-            '車の車種:' . strval($this->name) . "\n" .
+            '車の車種:' . $this->name . "\n" .
             '車体番号:' . strval($this->number) . "\n" .
-            'カラー:' . strval($this->color) . "\n" .
+            'カラー:' . $this->color . "\n" .
             '乗車人数:' . strval($this->passenger) . "人\n";
     }
 }
