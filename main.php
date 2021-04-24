@@ -5,8 +5,13 @@ require_once __DIR__ . '/Taxi.class.php';
 // Taxiクラスのインスタンスを生成
 $taxi1 = new Taxi('クラウンのタクシー', 222, 'black');
 
-// 3人乗車
-echo $taxi1->pickUp(3);
+// 2人乗車
+echo $taxi1->pickUp(2);
+echo $taxi1->information();
+echo "\n";
+
+// 1人乗車
+echo $taxi1->pickUp(1);
 echo $taxi1->information();
 echo "\n";
 
